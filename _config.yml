@@ -108,6 +108,3 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
-
-# 评论设置
-duoshuo_shortname: http://Romenluo.github.io/

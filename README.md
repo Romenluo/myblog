@@ -23,3 +23,10 @@ npm install
 ```
 hexo s
 ```
+
+安装主题渲染
+```
+$ git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake
+$ npm install hexo-renderer-jade@0.3.0 --save
+$ npm install hexo-renderer-stylus --save
+```
