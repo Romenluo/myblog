@@ -1,80 +1,17 @@
 ---
 layout: '[layout]'
 title: vue简单介绍和MVVM模式
-date: 2019-05-19 17:37:40
+date: 2019-05-19 17:59:32
 categories: vue
 tags: vue
 ---
-### vue.extend 扩展实例构造器
 
-* Vue.extend返回一个扩展实例构造器，预设了部分选项的Vue实例构造器。
-  其主要用来服务于Vue.component，用来生成组件。当在模板中遇到该组件名称作为标签的自定义元素时，
-  会自动调用“扩展实例构造器”来生产组件实例，并挂载到自定义元素上。
-  
- * 如我们在多个组件中需要使用到连接到github官网的连接，我们可以使用Vue.extend实现扩展实例
- ```
- var aa = Vue.extend({
-         template:"<p><a :href='url'>{{name}}</a></p>",
-         data: function () {
-             return {
-                 url: 'https://github.com',
-                 name: 'gitHub'
-             }
-         }
-     })
- ```
- * 将其挂载到自定义组件上
- ```
-    new aa().$mount('aa')
- ```
- 
-* 使用自定义组件
+### vue简单介绍和MVVM模式
 
-````html
-<aa></aa>
-````
+1. vue简单小巧的核心，渐进式技术栈，足以应付任何规模的应用。渐进式就是可以一步一步，有阶段性的来使用vue.js不必一开始就使用所有的东西。
+2. mvvm模式（Model-View-ViewModel）,由mvc衍生而来。有三层，分别是View，Model，ViewModel。其中View层代表的是视图、模版，
+负责将数据模型转化为UI展现出来。Model层代表的是模型、数据，可以在Model层中定义数据修改和操作的业务逻辑。ViewModel层连接Model和View。
+View和Model并没有直接的联系，通过ViewModel进行交互。ViewModel层通过双向数据绑定将View层和Model层连接了起来，使得View层和Model层的同步工作完全是自动的。
+如图所示
 
-* 完整代码如下
-
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="../lib/vue.min.js"></script>
-</head>
-<body>
-<aa></aa>
-<script>
-    var aa = Vue.extend({
-        template:"<p><a :href='url'>{{name}}</a></p>",
-        data: function () {
-            return {
-                url: 'https://github.com',
-                name: 'gitHub'
-            }
-        }
-    })
-    //挂载到自定义组件
-   new aa().$mount('aa')
-</script>
-</body>
-</html>
-```
-
-* 可以挂载到一个普通标签上面，可以使用标签选择器，
-标签为：
-
-```html
-<p class="aa"></p>
-<p id="=bb"></p>
-```
-
-* 挂载时使用选择器即可，挂载后会效果一样
-
-```js
-new aa().$mount('.aa');
-new aa().$mount('#bb');
-```
-
+![mvvm构架图](vue简单介绍和MVVM模式/mvvm.png)
