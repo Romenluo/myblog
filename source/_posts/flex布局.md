@@ -129,3 +129,51 @@ flex-flow: row wrap;
 >5. space-around：每个项目盒子的间隔相等。
 
 ![间隔相等](flex布局/flex-space-around.png)
+
+5. align-items属性,表示设置交叉轴上的对齐方式，垂直方向对齐方式
+
+>1. flex-start：交叉轴的起点对齐。
+
+![flex-start](flex布局/align-items-start.png)
+
+>2. flex-end：交叉轴的终点对齐。
+
+![flex-end](flex布局/align-items-end.png)
+
+>3. center：交叉轴的中点对齐。
+
+![center](flex布局/align-item-center.png)
+
+>4. baseline: 项目的第一行文字的基线对齐。
+
+![baseline](flex布局/align-items-baseline.png)
+
+>5. stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+
+![stretch](flex布局/flex-row.png)
+
+6. align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用,将设置 flex-wrap: wrap;
+
+>1. flex-start：与交叉轴的起点对齐(从上到下依次排列)。
+
+![stretch](flex布局/flex-align-content.png)
+
+>2. flex-end：与交叉轴的终点对齐(最下方开始排列)。
+
+![stretch](flex布局/flex-align-end.png)
+
+>3. center：与交叉轴的中点对齐。
+
+![stretch](flex布局/align-content-center.png)
+
+>4. space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+
+![stretch](flex布局/align-content-space-between.png)
+
+>5. space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+
+![stretch](flex布局/align-conten-space-around.png)
+
+>6. stretch（默认值）：轴线占满整个交叉轴。将box高设置为auto
+
+![stretch](flex布局/align-conten-stretch.png)
