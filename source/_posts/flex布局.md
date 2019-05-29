@@ -3,7 +3,7 @@ layout: '[layout]'
 title: flex布局
 date: 2019-05-21 15:28:36
 categories: HTML
-tags: HTML,flex
+tags: HTML,flex,css
 ---
 
 ### flex布局
@@ -184,8 +184,10 @@ flex-flow: row wrap;
 
 ![order](flex布局/order.png)
 
-2. flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大，如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+2. flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大，如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。从现象上可以看出此属性按比例切分父组件。
 3. flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小
-4. flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
+4. flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。
 5. flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
 6. align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+
+[参考文章](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
